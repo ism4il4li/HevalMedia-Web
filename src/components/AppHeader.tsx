@@ -18,6 +18,10 @@ const AppHeader: FC<AppHeaderParams> = ({
          * directly so they need to be present in the DOM. We use display: none to hide them and prevent errors.
          */
         <div style={isHidden ? { display: 'none' } : undefined}>
+            {/* HevalMedia branding logo - placed for legacy layouts and small screens */}
+            <div className='heval-header-brand'>
+                <img src='assets/branding/heval-logo-main.png' alt='HevalMedia' className='heval-header-logo' />
+            </div>
             <div className='mainDrawer hide'>
                 <div className='mainDrawer-scrollContainer scrollContainer focuscontainer-y' />
             </div>

@@ -1,0 +1,18 @@
+/* Branding styles for HevalMedia logo */
+.heval-header-brand {
+    display: block;
+    padding: 8px 16px;
+}
+
+.heval-header-logo {
+    max-height: 48px;
+    width: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .heval-header-brand {
+        text-align: center;
+        padding-top: 12px;
+    }
+}

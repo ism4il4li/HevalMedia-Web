@@ -1,32 +1,32 @@
 {
-    "name": "HevalMedia",
-    "description": "Fork of Jellyfin with custom branding",
-    "lang": "en-US",
-    "short_name": "HevalMedia",
-    "start_url": "index.html#/home",
-    "theme_color": "#1a237e",
-    "background_color": "#f5f5f5",
-    "display": "standalone",
-    "icons": [
-        {
-            "sizes": "72x72",
-            "src": "favicons/touchicon72.png",
-            "type": "image/png"
-        },
-        {
-            "sizes": "114x114",
-            "src": "favicons/touchicon114.png",
-            "type": "image/png"
-        },
-        {
-            "sizes": "144x144",
-            "src": "favicons/touchicon144.png",
-            "type": "image/png"
-        },
-        {
-            "sizes": "512x512",
-            "src": "favicons/touchicon512.png",
-            "type": "image/png"
-        }
-    ]
+  "name": "HevalMedia",
+  "description": "Fork of Jellyfin with custom branding",
+  "lang": "en-US",
+  "short_name": "HevalMedia",
+  "start_url": "index.html#/home",
+  "theme_color": "#1a237e",
+  "background_color": "#f5f5f5",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "72x72",
+      "src": "favicons/heval-logo-main.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "114x114",
+      "src": "favicons/heval-logo-main.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "144x144",
+      "src": "favicons/heval-logo-main.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "favicons/heval-logo-main.png",
+      "type": "image/png"
+    }
+  ]
 }

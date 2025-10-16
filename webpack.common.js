@@ -85,9 +85,9 @@ const config = {
                 },
                 'config.json',
                 'robots.txt',
+                // Use custom branding favicons/banner instead of the @jellyfin package
                 {
-                    from: 'touchicon*.png',
-                    context: path.resolve(__dirname, 'node_modules/@jellyfin/ux-web/favicons'),
+                    from: path.resolve(__dirname, 'src/assets/branding'),
                     to: 'favicons'
                 },
                 ...Assets.map(asset => {
