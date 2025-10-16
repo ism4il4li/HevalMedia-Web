@@ -794,19 +794,12 @@ function setTabs(type, selectedIndex, builder) {
 }
 
 /**
- * Fetch the server name and update the document title.
- * @param {ApiClient} [_apiClient] The current api client.
+ * Fixed tab title: Always use Heval-Media regardless of server name.
+ * If you want to revert to server-provided name, restore the previous code.
  */
 const fetchServerName = (_apiClient) => {
-    _apiClient
-        ?.getPublicSystemInfo()
-        .then(({ ServerName }) => {
-            documentTitle = ServerName || documentTitle;
-            document.title = documentTitle;
-        })
-        .catch((err) => {
-            console.error("[LibraryMenu] failed to fetch system info", err);
-        });
+    documentTitle = 'Heval-Media';
+    document.title = documentTitle;
 };
 
 function setDefaultTitle() {
@@ -848,7 +841,8 @@ function setTitle(title) {
         pageTitleElement.innerText = html || "";
     }
 
-    document.title = title || documentTitle;
+    // Force fixed tab title
+    document.title = 'Heval-Media';
 }
 
 function setTransparentMenu(transparent) {

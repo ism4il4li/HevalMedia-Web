@@ -67,6 +67,22 @@ pageTitleElement.style.backgroundImage = null;
 pageTitleElement.innerText = "Heval-Media";
 ```
 
+Additionally, to force the browser tab title to always be "Heval-Media" (instead of the server name):
+
+-   In the same file (`src/scripts/libraryMenu.js`), we made `fetchServerName` set a fixed title and adjusted `setTitle` to not override it:
+
+```js
+const fetchServerName = (_apiClient) => {
+    documentTitle = "Heval-Media";
+    document.title = documentTitle;
+};
+
+// ... later in setTitle(title)
+document.title = "Heval-Media";
+```
+
+To revert this and use the server name again, restore the original `fetchServerName` implementation that reads `ServerName` from `getPublicSystemInfo()` and sets `document.title = documentTitle`.
+
 3. Legacy header layout tweaks (so text sits next to the logo)
 
 -   `src/styles/librarybrowser.scss`
@@ -164,3 +180,31 @@ Because the web app uses a service worker and browser cache:
 -   See “Jellyfin” text again: ensure you’re serving the new `dist`, hard refresh, and clear the service worker.
 -   Logo not visible: verify the file path and size; an empty or tiny PNG (like 31 bytes) won’t render properly.
 -   Experimental AppBar not showing your text: make sure you’re using the experimental layout (localStorage or settings), and that `ServerButton.tsx` has your custom import and label.
+
+---
+
+Starting (1/2) Force tab title to Heval-Media
+
+Read libraryMenu.js, lines 780 to 860
+
+libraryMenu.js+5-11
+
+npm run build:production
+HEADER_BRANDING.md+16-0
+Alles klar — ich habe es so umgesetzt, dass der Browser‑Tabtitel immer “Heval‑Media” ist, unabhängig vom Jellyfin‑Servernamen.
+
+Was ich geändert habe
+
+libraryMenu.js
+fetchServerName setzt jetzt fest: documentTitle = 'Heval-Media'; document.title = documentTitle;
+setTitle(title) überschreibt den Tab‑Titel ebenfalls mit “Heval‑Media”, damit der Servername nicht mehr dazwischenfunkt.
+Build: Produktionsbuild ausgeführt, dist ist aktuell.
+Doku aktualisiert: docs/HEADER_BRANDING.md beschreibt jetzt auch, wie man den fixen Tabtitel setzt bzw. zurück auf Servername stellt.
+Was du jetzt tun kannst
+
+Seite neu laden (am besten hart: Ctrl+F5) oder kurz im Inkognito-Fenster testen.
+Falls ein Service Worker aktiv ist: DevTools → Application → Service Workers → Unregister/Update → Reload.
+Optional
+
+Wenn du später wieder den Servernamen im Tab sehen willst, sag Bescheid; ich stelle die originale Logik wieder her, oder du folgst der neuen Sektion in docs/HEADER_BRANDING.md (“To revert this…”).
+Passt der Tabtitel jetzt überall (auch auf anderen Seiten/Layouts), oder wünschst du noch eine Variante wie “Heval‑Media • <Seitenname>”?
