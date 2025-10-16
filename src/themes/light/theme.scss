@@ -44,11 +44,11 @@ html {
 }
 
 .pageTitleWithDefaultLogo {
-    background-image: url(@jellyfin/ux-web/banner-light.png);
+    background-image: url("../../assets/branding/heval-logo-main.png");
 }
 
 .layout-tv .pageTitleWithDefaultLogo {
-    background-image: url(@jellyfin/ux-web/icon-transparent.png);
+    background-image: url("../../assets/branding/heval-logo-main.png");
 }
 
 .backgroundContainer,
@@ -97,7 +97,7 @@ html {
     background: #ccc;
 }
 
-a[data-role=button] {
+a[data-role="button"] {
     background: #d8d8d8 !important;
 }
 

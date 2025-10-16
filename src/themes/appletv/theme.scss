@@ -23,7 +23,14 @@ html {
 .skinHeader-withBackground {
     color: rgba(0, 0, 0, 0.7);
     background: #303030;
-    background: linear-gradient(to right, #bcbcbc, #a7b4b7, #beb5a5, #adbec2, #b9c7cb);
+    background: linear-gradient(
+        to right,
+        #bcbcbc,
+        #a7b4b7,
+        #beb5a5,
+        #adbec2,
+        #b9c7cb
+    );
 }
 
 .skinHeader.semiTransparent {
@@ -35,11 +42,11 @@ html {
 }
 
 .pageTitleWithDefaultLogo {
-    background-image: url(@jellyfin/ux-web/banner-dark.png);
+    background-image: url("../../assets/branding/heval-logo-main.png");
 }
 
 .layout-tv .pageTitleWithDefaultLogo {
-    background-image: url(@jellyfin/ux-web/icon-transparent.png);
+    background-image: url("../../assets/branding/heval-logo-main.png");
 }
 
 html {
@@ -55,7 +62,14 @@ html {
 }
 
 .backgroundContainer.withBackdrop {
-    background: linear-gradient(to bottom, rgba(192, 212, 222, 0.94), rgba(235, 250, 254, 0.94), rgba(227, 220, 212, 0.94), rgba(206, 214, 216, 0.94), rgba(192, 211, 218, 0.94));
+    background: linear-gradient(
+        to bottom,
+        rgba(192, 212, 222, 0.94),
+        rgba(235, 250, 254, 0.94),
+        rgba(227, 220, 212, 0.94),
+        rgba(206, 214, 216, 0.94),
+        rgba(192, 211, 218, 0.94)
+    );
 }
 
 .actionSheet {
@@ -90,7 +104,7 @@ html {
     background: rgba(0, 0, 0, 0.24);
 }
 
-a[data-role=button] {
+a[data-role="button"] {
     background: #fff !important;
     background: rgba(0, 0, 0, 0.14) !important;
 }
@@ -205,7 +219,14 @@ a[data-role=button] {
 .playlistSectionButton {
     color: rgba(0, 0, 0, 0.7);
     background: #303030;
-    background: linear-gradient(to right, #bcbcbc, #a7b4b7, #beb5a5, #adbec2, #b9c7cb);
+    background: linear-gradient(
+        to right,
+        #bcbcbc,
+        #a7b4b7,
+        #beb5a5,
+        #adbec2,
+        #b9c7cb
+    );
 }
 
 .layout-tv .formDialogFooter:not(.formDialogFooter-clear) {
@@ -245,7 +266,14 @@ a[data-role=button] {
 
 .detailRibbon {
     background: #303030;
-    background: linear-gradient(to right, #bcbcbc, #a7b4b7, #beb5a5, #adbec2, #b9c7cb);
+    background: linear-gradient(
+        to right,
+        #bcbcbc,
+        #a7b4b7,
+        #beb5a5,
+        #adbec2,
+        #b9c7cb
+    );
 }
 
 .layout-tv .detailRibbon {
@@ -319,7 +347,12 @@ a[data-role=button] {
 }
 
 .itemProgressBarForeground {
-    background: linear-gradient(90deg, rgba(0, 210, 201, 1) 0%, rgba(13, 194, 98, 1) 28%, rgba(0, 75, 185, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 210, 201, 1) 0%,
+        rgba(13, 194, 98, 1) 28%,
+        rgba(0, 75, 185, 1) 100%
+    );
 }
 
 .itemProgressBar {
@@ -487,7 +520,9 @@ a[data-role=button] {
 }
 
 .card.show-focus:not(.show-animation) .cardBox.visualCardBox,
-.card.show-focus:not(.show-animation) .cardBox:not(.visualCardBox) .cardScalable {
+.card.show-focus:not(.show-animation)
+    .cardBox:not(.visualCardBox)
+    .cardScalable {
     border-radius: 1rem;
 }
 

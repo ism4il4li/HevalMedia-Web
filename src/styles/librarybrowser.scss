@@ -1,4 +1,4 @@
-@use 'mixins' as *;
+@use "mixins" as *;
 
 // The padding of the header content on mobile needs to be adjusted
 // based on the size of the poster card (values from card.scss)
@@ -202,10 +202,15 @@
     background-position: left center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 13.2em;
+    /* Extend width and add padding so text can sit next to logo */
+    padding-left: 2.2em;
+    width: auto;
+    min-width: 13.2em;
 
-    [dir='rtl'] & {
+    [dir="rtl"] & {
         background-position: right center;
+        padding-left: 0;
+        padding-right: 2.2em;
     }
 }
 
@@ -1369,13 +1374,21 @@ div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
     }
 
     [dir="rtl"] & {
-        @include conditional-max(padding-right, 3.3%, env(safe-area-inset-right));
+        @include conditional-max(
+            padding-right,
+            3.3%,
+            env(safe-area-inset-right)
+        );
     }
 }
 
 .padded-right {
     [dir="ltr"] & {
-        @include conditional-max(padding-right, 3.3%, env(safe-area-inset-right));
+        @include conditional-max(
+            padding-right,
+            3.3%,
+            env(safe-area-inset-right)
+        );
     }
 
     [dir="rtl"] & {
@@ -1403,7 +1416,11 @@ div:not(.sectionTitleContainer-cards) > .sectionTitle-cards {
 
 @media all and (min-height: 31.25em) {
     [dir="ltr"] .padded-right-withalphapicker {
-        @include conditional-max(padding-right, 7.5%, env(safe-area-inset-right));
+        @include conditional-max(
+            padding-right,
+            7.5%,
+            env(safe-area-inset-right)
+        );
     }
 
     [dir="rtl"] .padded-right-withalphapicker {
